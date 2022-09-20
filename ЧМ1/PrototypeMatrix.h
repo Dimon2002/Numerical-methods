@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 
 #include "DataConfiguration.h"
 #include "Libraries.h"
@@ -16,19 +16,19 @@ public:
 		const std::string& PathVector);
 	~Matrix();
 
-	void CalcLUStar();   // Разложение матрицы A на LU*
-	void ForwardSubstitution(); // Решение уравнения методом прямого хода
-	void BackwardSubstitution();    // Решение уравнения методом обратного хода
-	
-	void ShowSolution(); // Вывод результата решения СЛАУ
-	void ShowDecompositions(); // Вывод Lu* Разложения
+	void CalcLUStar();   // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ A пїЅпїЅ LU*
+	void ForwardSubstitution(); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+	void BackwardSubstitution();    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+
+	void ShowSolution(); // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
+	void ShowDecompositions(); // пїЅпїЅпїЅпїЅпїЅ Lu* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
 private:
 	int n;
 	int HalfTapeSize;
 
-	type** al, ** au, * di; // Хранение матрицы
-	type* x, * y, *b; // Резултат, Вектор прямого хода, Вектор правой части
+	type** al, ** au, * di; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+	type* x, * y, * b; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 
 	void InputSize(const std::string& PathSize);
 	void InputMatrix(
@@ -37,6 +37,6 @@ private:
 		const std::string& PathDi);
 	void InputVector(const std::string& PathVector);
 
-	void AllocateMemory(); // Выделение памяти для хранения данных
-	void ExistenceDecomposition(); // Проверка на существование разложения
+	void AllocateMemory(); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+	void ExistenceDecomposition(); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 };

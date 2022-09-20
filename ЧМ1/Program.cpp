@@ -16,10 +16,10 @@ int main()
 		goto stop;
 
 	a.CalcLUStar();
-  	a.ForwardSubstitution();
-  	a.BackwardSubstitution();
+	a.ForwardSubstitution();
+	a.BackwardSubstitution();
 	a.ShowSolution();
-//    a.ShowDecompositions();
+	//a.ShowDecompositions();
 	return 0;
 
 stop:

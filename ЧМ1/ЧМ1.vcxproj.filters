@@ -26,21 +26,14 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DataConfiguration.h">
+    <ClInclude Include="PrototypeMatrix.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="PrototypeMatrix.h">
+    <ClInclude Include="DataConfiguration.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Libraries.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="SizeMatrix.txt" />
-    <Text Include="Au.txt" />
-    <Text Include="Al.txt" />
-    <Text Include="Di.txt" />
-    <Text Include="V.txt" />
   </ItemGroup>
 </Project>

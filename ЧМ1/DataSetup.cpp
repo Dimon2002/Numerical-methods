@@ -1,4 +1,4 @@
-#include "PrototypeMatrix.h"
+п»ї#include "PrototypeMatrix.h"
 
 Matrix::Matrix(
 	const std::string& PathSize,
@@ -32,13 +32,13 @@ void Matrix::InputSize(const std::string& PathSize) {
 
 	std::ifstream ReaderSize(PathSize + ".txt");
 	if (!ReaderSize.is_open()) {
-		Errors = "Файл SizeMatrix.txt не найден!";
+		Errors = "пїЅпїЅпїЅпїЅ SizeMatrix.txt пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ!";
 		return;
 	}
 	ReaderSize >> n >> HalfTapeSize;
 	ReaderSize.close();
 	if (HalfTapeSize > n) {
-		Errors = "Неверные размеры матрицы и полуширины!";
+		Errors = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ!";
 		return;
 	}
 }
@@ -72,17 +72,17 @@ void Matrix::InputMatrix(
 
 	if (!ReaderAu.is_open()) {
 		ReaderAu.close();
-		Errors = "Файл Au.txt не найден!";
+		Errors = "пїЅпїЅпїЅпїЅ Au.txt пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ!";
 		return;
 	}
 	if (!ReaderAl.is_open()) {
 		ReaderAl.close();
-		Errors = "Файл Al.txt не найден!";
+		Errors = "пїЅпїЅпїЅпїЅ Al.txt пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ!";
 		return;
 	}
 	if (!ReaderDi.is_open()) {
 		ReaderDi.close();
-		Errors = "Файл Di.txt не найден!";
+		Errors = "пїЅпїЅпїЅпїЅ Di.txt пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ!";
 		return;
 	}
 	for (size_t i = 0; i < n; i++)
@@ -105,7 +105,7 @@ void Matrix::InputVector(const std::string& PathVector) {
 	std::ifstream ReaderVector(PathVector + ".txt");
 	if (!ReaderVector.is_open()) {
 		ReaderVector.close();
-		Errors = "Файл V.txt не найден!";
+		Errors = "пїЅпїЅпїЅпїЅ V.txt пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ!";
 		return;
 	}
 	for (size_t i = 0; i < n; i++)
@@ -119,7 +119,7 @@ void Matrix::ExistenceDecomposition()
 	for (size_t i = 0; i < n; i++)
 		if (di[i] == 0)
 		{
-			Errors = "Матрица не имеет LU* разложения";
+			Errors = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ LU* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ";
 			return;
 		}
 }
